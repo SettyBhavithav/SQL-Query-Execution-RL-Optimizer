@@ -1,0 +1,14 @@
+seed: 42
+dataset_version: "job_light+synthetic@local-demo-schema-v1"
+database_url: null
+statement_timeout_ms: 15000
+workload:
+  files:
+    - job_light.sql
+    - synthetic.sql
+    - custom_queries.sql
+    - scale.sql
+    - inference.sql
+  min_relations: 2
+  max_relations: 4
+  max_queries: 2000

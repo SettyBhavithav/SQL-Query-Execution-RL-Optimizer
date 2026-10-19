@@ -1,0 +1,144 @@
+{
+  "seed": 42,
+  "postgres": {
+    "server_version": "16.15 (Debian 16.15-1.pgdg13+2)",
+    "shared_buffers": "128MB",
+    "work_mem": "4MB",
+    "effective_cache_size": "4GB",
+    "random_page_cost": "4",
+    "seq_page_cost": "1",
+    "cpu_tuple_cost": "0.01",
+    "cpu_index_tuple_cost": "0.005",
+    "cpu_operator_cost": "0.0025",
+    "join_collapse_limit": "8",
+    "from_collapse_limit": "8",
+    "geqo_threshold": "12",
+    "enable_hashjoin": "on",
+    "enable_mergejoin": "on",
+    "enable_nestloop": "on",
+    "enable_indexscan": "on",
+    "enable_indexonlyscan": "on",
+    "enable_bitmapscan": "on",
+    "enable_seqscan": "on",
+    "enable_sort": "on",
+    "enable_material": "on"
+  },
+  "schema": [
+    {
+      "table_name": "cast_info",
+      "est_rows": 27919,
+      "index_bytes": 0,
+      "heap_bytes": 1310720
+    },
+    {
+      "table_name": "company_type",
+      "est_rows": 2,
+      "index_bytes": 16384,
+      "heap_bytes": 8192
+    },
+    {
+      "table_name": "info_type",
+      "est_rows": 119,
+      "index_bytes": 16384,
+      "heap_bytes": 8192
+    },
+    {
+      "table_name": "keyword",
+      "est_rows": 2000,
+      "index_bytes": 65536,
+      "heap_bytes": 90112
+    },
+    {
+      "table_name": "movie_companies",
+      "est_rows": 9968,
+      "index_bytes": 0,
+      "heap_bytes": 442368
+    },
+    {
+      "table_name": "movie_info",
+      "est_rows": 13934,
+      "index_bytes": 0,
+      "heap_bytes": 507904
+    },
+    {
+      "table_name": "movie_info_idx",
+      "est_rows": 6077,
+      "index_bytes": 0,
+      "heap_bytes": 221184
+    },
+    {
+      "table_name": "movie_keyword",
+      "est_rows": 17964,
+      "index_bytes": 0,
+      "heap_bytes": 655360
+    },
+    {
+      "table_name": "title",
+      "est_rows": 4000,
+      "index_bytes": 106496,
+      "heap_bytes": 212992
+    }
+  ],
+  "dataset_files": [
+    "job_light.sql",
+    "synthetic.sql",
+    "custom_queries.sql",
+    "scale.sql",
+    "inference.sql"
+  ],
+  "dataset_version": "job_light+synthetic@local-demo-schema-v2",
+  "n_queries_loaded": 1438,
+  "split": {
+    "train": 1006,
+    "val": 215,
+    "test": 217
+  },
+  "config": {
+    "seed": 42,
+    "dataset_version": "job_light+synthetic@local-demo-schema-v2",
+    "database_url": null,
+    "statement_timeout_ms": 15000,
+    "n_titles": 4000,
+    "warmup": true,
+    "output_dir": "results",
+    "train_frac": 0.7,
+    "val_frac": 0.15,
+    "workload": {
+      "files": [
+        "job_light.sql",
+        "synthetic.sql",
+        "custom_queries.sql",
+        "scale.sql",
+        "inference.sql"
+      ],
+      "min_relations": 2,
+      "max_relations": 4,
+      "max_queries": 2000
+    },
+    "ppo": {
+      "timesteps": 25000,
+      "n_steps": 64,
+      "batch_size": 32,
+      "learning_rate": 0.0003,
+      "n_epochs": 10,
+      "ent_coef": 0.01
+    },
+    "dqn": {
+      "timesteps": 25000,
+      "buffer_size": 20000,
+      "batch_size": 32,
+      "learning_rate": 0.0001,
+      "exploration_fraction": 0.3,
+      "exploration_final_eps": 0.05
+    }
+  },
+  "architecture": {
+    "state_dim": "52 features from sqlglot parse + EXPLAIN ANALYZE metrics",
+    "action_space": "MultiDiscrete([8, 4, 4, 7]) = join_order \u00d7 join_method \u00d7 scan_method \u00d7 index",
+    "reward": "\u03b1*time_improvement + \u03b2*buffer_improvement - \u03b3*planning_overhead",
+    "algorithms": [
+      "PPO (MultiDiscrete)",
+      "DQN (flattened Discrete)"
+    ]
+  }
+}

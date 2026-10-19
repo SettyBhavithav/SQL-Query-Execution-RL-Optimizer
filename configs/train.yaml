@@ -1,0 +1,53 @@
+seed: 42
+dataset_version: "job_light+synthetic@local-demo-schema-v2"
+database_url: null  # uses DATABASE_URL or postgresql://sqlopt:sqlopt@127.0.0.1:55432/sqlopt
+statement_timeout_ms: 15000
+n_titles: 4000
+warmup: true
+output_dir: results
+train_frac: 0.70
+val_frac: 0.15
+workload:
+  files:
+    - job_light.sql
+    - synthetic.sql
+    - custom_queries.sql
+    - scale.sql
+    - inference.sql
+  min_relations: 2
+  max_relations: 4
+  max_queries: 2000
+
+# ── PPO ────────────────────────────────────────────────────────────────
+# On-policy, native MultiDiscrete support for the 4D action:
+#   join_order × join_method × scan_method × index
+# Suitable because:
+# - MultiDiscrete naturally represents independent categorical decisions.
+# - Clipped objective prevents destructive updates from noisy PG timing.
+ppo:
+  timesteps: 25000
+  n_steps: 64
+  batch_size: 32
+  learning_rate: 0.0003
+  n_epochs: 10
+  ent_coef: 0.01
+
+# ── DQN ────────────────────────────────────────────────────────────────
+# Off-policy Q-learning on the flattened Discrete encoding of the same
+# 4D action. Total discrete actions = 8 × 4 × 4 × 7 = 896.
+# Suitable because:
+# - Replay buffer efficiently reuses past EXPLAIN ANALYZE results.
+# - ε-greedy exploration discovers diverse optimization strategies.
+dqn:
+  timesteps: 25000
+  buffer_size: 20000
+  batch_size: 32
+  learning_rate: 0.0001
+  exploration_fraction: 0.3
+  exploration_final_eps: 0.05
+
+# NOTE: SAC and DDPG are NOT used.
+# They require continuous action spaces, but the historical cost_reduction
+# continuous action has been completely removed. All optimization actions
+# are now discrete PostgreSQL interventions (join order, join method,
+# scan method, index selection).

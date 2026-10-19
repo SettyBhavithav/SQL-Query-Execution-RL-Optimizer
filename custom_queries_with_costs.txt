@@ -1,0 +1,366 @@
+Query: SELECT COUNT(*) FROM cast_info WHERE movie_id > 205 LIMIT 10;
+Cost: 14623.73
+
+Query: SELECT COUNT(*) FROM cast_info LIMIT 10;
+Cost: 13531.54
+
+Query: SELECT COUNT(*) FROM cast_info WHERE movie_id < 645 LIMIT 10;
+Cost: 9.41
+
+Query: SELECT COUNT(*) FROM info_type LIMIT 10;
+Cost: 2.4
+
+Query: SELECT COUNT(*) FROM movie_info LIMIT 10;
+Cost: 197676.79
+
+Query: SELECT COUNT(*) FROM movie_keyword WHERE movie_id > 557 LIMIT 10;
+Cost: 53754.45
+
+Query: SELECT COUNT(*) FROM movie_keyword WHERE movie_id < 214 LIMIT 10;
+Cost: 10.39
+
+Query: SELECT COUNT(*) FROM movie_keyword LIMIT 10;
+Cost: 49042.34
+
+Query: SELECT COUNT(*) FROM movie_info WHERE movie_id > 554 LIMIT 10;
+Cost: 253509.83
+
+Query: SELECT COUNT(*) FROM title LIMIT 10;
+Cost: 22.6
+
+Query: SELECT COUNT(*) FROM cast_info WHERE movie_id > 386 LIMIT 10;
+Cost: 14623.65
+
+Query: SELECT COUNT(*) FROM cast_info WHERE movie_id < 431 LIMIT 10;
+Cost: 7.72
+
+Query: SELECT COUNT(*) FROM title WHERE production_year < 1999 LIMIT 10;
+Cost: 23.15
+
+Query: SELECT COUNT(*) FROM movie_info WHERE movie_id < 394 LIMIT 10;
+Cost: 32.98
+
+Query: SELECT COUNT(*) FROM movie_info WHERE movie_id > 359 LIMIT 10;
+Cost: 253510.36
+
+Query: SELECT COUNT(*) FROM info_type WHERE id > 135 LIMIT 10;
+Cost: 2.4
+
+Query: SELECT COUNT(*) FROM info_type WHERE id < 562 LIMIT 10;
+Cost: 2.68
+
+Query: SELECT COUNT(*) FROM movie_info WHERE movie_id < 452 LIMIT 10;
+Cost: 36.0
+
+Query: SELECT COUNT(*) FROM info_type WHERE id < 236 LIMIT 10;
+Cost: 2.68
+
+Query: SELECT COUNT(*) FROM cast_info WHERE movie_id < 539 LIMIT 10;
+Cost: 8.57
+
+Query: SELECT COUNT(*) FROM movie_keyword WHERE movie_id < 453 LIMIT 10;
+Cost: 12.69
+
+Query: SELECT COUNT(*) FROM title WHERE production_year < 1975 LIMIT 10;
+Cost: 23.15
+
+Query: SELECT COUNT(*) FROM movie_keyword WHERE movie_id < 315 LIMIT 10;
+Cost: 11.35
+
+Query: SELECT COUNT(*) FROM cast_info WHERE movie_id > 93 LIMIT 10;
+Cost: 14623.77
+
+Query: SELECT COUNT(*) FROM movie_info WHERE movie_id < 350 LIMIT 10;
+Cost: 30.68
+
+Query: SELECT COUNT(*) FROM info_type WHERE id < 804 LIMIT 10;
+Cost: 2.68
+
+Query: SELECT COUNT(*) FROM cast_info WHERE movie_id > 651 LIMIT 10;
+Cost: 14623.54
+
+Query: SELECT COUNT(*) FROM title WHERE production_year < 1933 LIMIT 10;
+Cost: 23.15
+
+Query: SELECT COUNT(*) FROM movie_keyword WHERE movie_id > 801 LIMIT 10;
+Cost: 53754.33
+
+Query: SELECT COUNT(*) FROM cast_info WHERE movie_id < 430 LIMIT 10;
+Cost: 7.72
+
+Query: SELECT COUNT(*) FROM title WHERE production_year > 1975 LIMIT 10;
+Cost: 24.17
+
+Query: SELECT COUNT(*) FROM cast_info WHERE movie_id < 652 LIMIT 10;
+Cost: 9.47
+
+Query: SELECT COUNT(*) FROM info_type WHERE id > 574 LIMIT 10;
+Cost: 2.4
+
+Query: SELECT COUNT(*) FROM title WHERE production_year < 1985 LIMIT 10;
+Cost: 23.15
+
+Query: SELECT COUNT(*) FROM info_type WHERE id < 321 LIMIT 10;
+Cost: 2.68
+
+Query: SELECT COUNT(*) FROM title WHERE production_year > 1947 LIMIT 10;
+Cost: 24.17
+
+Query: SELECT COUNT(*) FROM title WHERE production_year < 1960 LIMIT 10;
+Cost: 23.15
+
+Query: SELECT COUNT(*) FROM movie_info WHERE movie_id < 31 LIMIT 10;
+Cost: 10.0
+
+Query: SELECT COUNT(*) FROM movie_keyword WHERE movie_id < 30 LIMIT 10;
+Cost: 8.61
+
+Query: SELECT COUNT(*) FROM cast_info WHERE movie_id < 848 LIMIT 10;
+Cost: 11.01
+
+Query: SELECT COUNT(*) FROM info_type WHERE id < 815 LIMIT 10;
+Cost: 2.68
+
+Query: SELECT COUNT(*) FROM info_type WHERE id > 243 LIMIT 10;
+Cost: 2.4
+
+Query: SELECT COUNT(*) FROM title WHERE production_year < 1956 LIMIT 10;
+Cost: 23.15
+
+Query: SELECT COUNT(*) FROM movie_keyword WHERE movie_id > 735 LIMIT 10;
+Cost: 53754.36
+
+Query: SELECT COUNT(*) FROM cast_info WHERE movie_id < 282 LIMIT 10;
+Cost: 6.54
+
+Query: SELECT COUNT(*) FROM movie_keyword WHERE movie_id < 67 LIMIT 10;
+Cost: 8.97
+
+Query: SELECT COUNT(*) FROM info_type WHERE id > 183 LIMIT 10;
+Cost: 2.4
+
+Query: SELECT COUNT(*) FROM cast_info WHERE movie_id > 474 LIMIT 10;
+Cost: 14623.62
+
+Query: SELECT COUNT(*) FROM movie_info WHERE movie_id > 313 LIMIT 10;
+Cost: 253510.48
+
+Query: SELECT COUNT(*) FROM movie_keyword WHERE movie_id > 277 LIMIT 10;
+Cost: 53754.59
+
+Query: SELECT COUNT(*) FROM title WHERE production_year < 1907 LIMIT 10;
+Cost: 23.15
+
+Query: SELECT COUNT(*) FROM info_type WHERE id < 769 LIMIT 10;
+Cost: 2.68
+
+Query: SELECT COUNT(*) FROM movie_companies mc,title t,movie_info_idx mi_idx WHERE t.id=mc.movie_id AND t.id=mi_idx.movie_id AND mi_idx.info_type_id=112 AND mc.company_type_id=2;
+Cost: 853.28
+
+Query: SELECT COUNT(*) FROM movie_companies mc,title t,movie_info_idx mi_idx WHERE t.id=mc.movie_id AND t.id=mi_idx.movie_id AND mi_idx.info_type_id=113 AND mc.company_type_id=2 AND t.production_year>2005 AND t.production_year<2010;
+Cost: 30.65
+
+Query: SELECT COUNT(*) FROM movie_companies mc,title t,movie_info_idx mi_idx WHERE t.id=mc.movie_id AND t.id=mi_idx.movie_id AND mi_idx.info_type_id=112 AND mc.company_type_id=2 AND t.production_year>2010;
+Cost: 853.08
+
+Query: SELECT COUNT(*) FROM movie_companies mc,title t,movie_info_idx mi_idx WHERE t.id=mc.movie_id AND t.id=mi_idx.movie_id AND mi_idx.info_type_id=113 AND mc.company_type_id=2 AND t.production_year>2000;
+Cost: 30.62
+
+Query: SELECT COUNT(*) FROM movie_companies mc,title t,movie_keyword mk WHERE t.id=mc.movie_id AND t.id=mk.movie_id AND mk.keyword_id=117;
+Cost: 8088.15
+
+Query: SELECT COUNT(*) FROM title t,movie_info mi,movie_keyword mk WHERE t.id=mi.movie_id AND t.id=mk.movie_id AND t.production_year>2005;
+Cost: 23674.53
+
+Query: SELECT COUNT(*) FROM title t,movie_info mi,movie_keyword mk WHERE t.id=mi.movie_id AND t.id=mk.movie_id AND t.production_year>2010;
+Cost: 23674.53
+
+Query: SELECT COUNT(*) FROM title t,movie_info mi,movie_keyword mk WHERE t.id=mi.movie_id AND t.id=mk.movie_id AND t.production_year>1990;
+Cost: 23674.53
+
+Query: SELECT COUNT(*) FROM title t,movie_info_idx mi_idx,movie_keyword mk WHERE t.id=mi_idx.movie_id AND t.id=mk.movie_id AND t.production_year>2005 AND mi_idx.info_type_id=101;
+Cost: 6302.63
+
+Query: SELECT COUNT(*) FROM title t,movie_info_idx mi_idx,movie_keyword mk WHERE t.id=mi_idx.movie_id AND t.id=mk.movie_id AND t.production_year>2010 AND mi_idx.info_type_id=101;
+Cost: 6302.63
+
+Query: SELECT COUNT(*) FROM title t,movie_info_idx mi_idx,movie_keyword mk WHERE t.id=mi_idx.movie_id AND t.id=mk.movie_id AND t.production_year>1990 AND mi_idx.info_type_id=101;
+Cost: 6302.63
+
+Query: SELECT COUNT(*) FROM title t,movie_info mi,movie_companies mc WHERE t.id=mi.movie_id AND t.id=mc.movie_id AND t.production_year>2005 AND mc.company_type_id=2;
+Cost: 15544.18
+
+Query: SELECT COUNT(*) FROM title t,movie_info mi,movie_companies mc WHERE t.id=mi.movie_id AND t.id=mc.movie_id AND t.production_year>2010 AND mc.company_type_id=2;
+Cost: 15544.18
+
+Query: SELECT COUNT(*) FROM title t,movie_info mi,movie_companies mc WHERE t.id=mi.movie_id AND t.id=mc.movie_id AND t.production_year>1990 AND mc.company_type_id=2;
+Cost: 15544.18
+
+Query: SELECT COUNT(*) FROM movie_keyword mk,title t,cast_info ci WHERE t.id=mk.movie_id AND t.id=ci.movie_id AND t.production_year>2010 AND mk.keyword_id=8200;
+Cost: 958.61
+
+Query: SELECT COUNT(*) FROM movie_keyword mk,title t,cast_info ci WHERE t.id=mk.movie_id AND t.id=ci.movie_id AND t.production_year>2014;
+Cost: 5505.22
+
+Query: SELECT COUNT(*) FROM movie_keyword mk,title t,cast_info ci WHERE t.id=mk.movie_id AND t.id=ci.movie_id AND t.production_year>2014 AND mk.keyword_id=8200;
+Cost: 958.61
+
+Query: SELECT COUNT(*) FROM movie_keyword mk,title t,cast_info ci WHERE t.id=mk.movie_id AND t.id=ci.movie_id AND t.production_year>2000 AND mk.keyword_id=8200;
+Cost: 958.61
+
+Query: SELECT COUNT(*) FROM movie_keyword mk,title t,cast_info ci WHERE t.id=mk.movie_id AND t.id=ci.movie_id AND t.production_year>2000;
+Cost: 5505.22
+
+Query: SELECT COUNT(*) FROM cast_info ci,title t WHERE t.id=ci.movie_id AND t.production_year>1980 AND t.production_year<1995;
+Cost: 29.2
+
+Query: SELECT COUNT(*) FROM cast_info ci,title t WHERE t.id=ci.movie_id AND t.production_year>1980 AND t.production_year<1984;
+Cost: 29.2
+
+Query: SELECT COUNT(*) FROM cast_info ci,title t WHERE t.id=ci.movie_id AND t.production_year>1980 AND t.production_year<2010;
+Cost: 29.2
+
+Query: SELECT COUNT(*) FROM cast_info ci,title t,movie_companies mc WHERE t.id=ci.movie_id AND t.id=mc.movie_id AND ci.role_id=2;
+Cost: 14.55
+
+Query: SELECT COUNT(*) FROM cast_info ci,title t,movie_companies mc WHERE t.id=ci.movie_id AND t.id=mc.movie_id AND ci.role_id=4;
+Cost: 14.55
+
+Query: SELECT COUNT(*) FROM cast_info ci,title t,movie_companies mc WHERE t.id=ci.movie_id AND t.id=mc.movie_id AND ci.role_id=7;
+Cost: 14.55
+
+Query: SELECT COUNT(*) FROM cast_info ci,title t,movie_companies mc WHERE t.id=ci.movie_id AND t.id=mc.movie_id AND t.production_year>2005 AND t.production_year<2015 AND ci.role_id=2;
+Cost: 14.57
+
+Query: SELECT COUNT(*) FROM cast_info ci,title t,movie_companies mc WHERE t.id=ci.movie_id AND t.id=mc.movie_id AND t.production_year>2007 AND t.production_year<2010 AND ci.role_id=2;
+Cost: 14.57
+
+Query: SELECT COUNT(*) FROM title t,cast_info ci,movie_companies mc WHERE t.id=mc.movie_id AND t.id=ci.movie_id AND t.production_year>2005 AND ci.role_id=1;
+Cost: 4467.38
+
+Query: SELECT COUNT(*) FROM title t,cast_info ci,movie_companies mc WHERE t.id=mc.movie_id AND t.id=ci.movie_id AND t.production_year>2010 AND ci.role_id=1;
+Cost: 4467.38
+
+Query: SELECT COUNT(*) FROM title t,cast_info ci,movie_companies mc WHERE t.id=mc.movie_id AND t.id=ci.movie_id AND t.production_year>1990;
+Cost: 3479.41
+
+Query: SELECT COUNT(*) FROM title t,movie_keyword mk,movie_companies mc WHERE t.id=mk.movie_id AND t.id=mc.movie_id AND mk.keyword_id=398 AND mc.company_type_id=2 AND t.production_year>1950 AND t.production_year<2000;
+Cost: 43.4
+
+Query: SELECT COUNT(*) FROM title t,movie_keyword mk,movie_companies mc WHERE t.id=mk.movie_id AND t.id=mc.movie_id AND mk.keyword_id=398 AND mc.company_type_id=2;
+Cost: 8523.61
+
+Query: SELECT COUNT(*) FROM title t,movie_keyword mk,movie_companies mc WHERE t.id=mk.movie_id AND t.id=mc.movie_id AND t.production_year>1950;
+Cost: 8257.3
+
+Query: SELECT COUNT(*) FROM title t,movie_info mi,movie_info_idx mi_idx,movie_companies mc WHERE t.id=mi.movie_id AND t.id=mi_idx.movie_id AND t.id=mc.movie_id AND mi_idx.info_type_id=101 AND mi.info_type_id=3 AND t.production_year>2005 AND t.production_year<2008 AND mc.company_type_id=2;
+Cost: 38.61
+
+Query: SELECT COUNT(*) FROM title t,movie_info mi,movie_info_idx mi_idx,movie_companies mc WHERE t.id=mi.movie_id AND t.id=mi_idx.movie_id AND t.id=mc.movie_id AND mi_idx.info_type_id=113 AND mi.info_type_id=105;
+Cost: 26.01
+
+Query: SELECT COUNT(*) FROM title t,movie_info mi,movie_info_idx mi_idx,movie_companies mc WHERE t.id=mi.movie_id AND t.id=mi_idx.movie_id AND t.id=mc.movie_id AND mi_idx.info_type_id=101 AND mi.info_type_id=3 AND t.production_year>2000 AND t.production_year<2010 AND mc.company_type_id=2;
+Cost: 38.61
+
+Query: SELECT COUNT(*) FROM title t,movie_info mi,movie_companies mc,movie_info_idx mi_idx WHERE t.id=mi.movie_id AND t.id=mc.movie_id AND t.id=mi_idx.movie_id AND t.kind_id=1 AND mc.company_type_id=2 AND mi_idx.info_type_id=101 AND mi.info_type_id=16;
+Cost: 19.07
+
+Query: SELECT COUNT(*) FROM title t,movie_info mi,movie_info_idx mi_idx,movie_keyword mk WHERE t.id=mi.movie_id AND t.id=mk.movie_id AND t.id=mi_idx.movie_id AND t.production_year>2010 AND t.kind_id=1 AND mi.info_type_id=8 AND mi_idx.info_type_id=101;
+Cost: 23.27
+
+Query: SELECT COUNT(*) FROM title t,movie_info mi,movie_info_idx mi_idx,movie_keyword mk WHERE t.id=mi.movie_id AND t.id=mk.movie_id AND t.id=mi_idx.movie_id AND t.kind_id=1 AND mi.info_type_id=8 AND mi_idx.info_type_id=101;
+Cost: 23.27
+
+Query: SELECT COUNT(*) FROM title t,movie_info mi,movie_info_idx mi_idx,movie_keyword mk WHERE t.id=mi.movie_id AND t.id=mk.movie_id AND t.id=mi_idx.movie_id AND t.production_year>2005 AND mi.info_type_id=8 AND mi_idx.info_type_id=101;
+Cost: 11519.24
+
+Query: SELECT COUNT(*) FROM title t,movie_info mi,movie_companies mc,movie_keyword mk WHERE t.id=mi.movie_id AND t.id=mk.movie_id AND t.id=mc.movie_id AND mi.info_type_id=16 AND t.production_year>2000;
+Cost: 30286.2
+
+Query: SELECT COUNT(*) FROM title t,movie_info mi,movie_companies mc,movie_keyword mk WHERE t.id=mi.movie_id AND t.id=mk.movie_id AND t.id=mc.movie_id AND mi.info_type_id=16 AND t.production_year>2005 AND t.production_year<2010;
+Cost: 89.55
+
+Query: SELECT COUNT(*) FROM title t,movie_info mi,movie_companies mc,movie_keyword mk WHERE t.id=mi.movie_id AND t.id=mk.movie_id AND t.id=mc.movie_id AND mi.info_type_id=16 AND t.production_year>1990;
+Cost: 30286.2
+
+Query: SELECT COUNT(*) FROM cast_info ci,title t,movie_keyword mk,movie_companies mc WHERE t.id=ci.movie_id AND t.id=mk.movie_id AND t.id=mc.movie_id AND mk.keyword_id=117;
+Cost: 6901.76
+
+Query: SELECT COUNT(*) FROM title t,movie_info mi,movie_info_idx mi_idx,cast_info ci WHERE t.id=mi.movie_id AND t.id=mi_idx.movie_id AND t.id=ci.movie_id AND mi.info_type_id=105 AND mi_idx.info_type_id=100;
+Cost: 7598.49
+
+Query: SELECT COUNT(*) FROM title t,movie_info mi,movie_info_idx mi_idx,cast_info ci WHERE t.id=mi.movie_id AND t.id=mi_idx.movie_id AND t.id=ci.movie_id AND mi.info_type_id=3 AND mi_idx.info_type_id=101 AND t.production_year>2008 AND t.production_year<2014;
+Cost: 34.21
+
+Query: SELECT COUNT(*) FROM title t,movie_info mi,movie_info_idx mi_idx,cast_info ci WHERE t.id=mi.movie_id AND t.id=mi_idx.movie_id AND t.id=ci.movie_id AND mi.info_type_id=3 AND mi_idx.info_type_id=100;
+Cost: 8605.12
+
+Query: SELECT COUNT(*) FROM title t,movie_info mi,movie_companies mc,cast_info ci WHERE t.id=mi.movie_id AND t.id=mc.movie_id AND t.id=ci.movie_id AND ci.role_id=2 AND mi.info_type_id=16 AND t.production_year>2005 AND t.production_year<2009;
+Cost: 16.11
+
+Query: SELECT COUNT(*) FROM title t,movie_info mi,movie_companies mc,cast_info ci WHERE t.id=mi.movie_id AND t.id=mc.movie_id AND t.id=ci.movie_id AND ci.role_id=2 AND mi.info_type_id=16;
+Cost: 16.07
+
+Query: SELECT COUNT(*) FROM title t,movie_info mi,movie_companies mc,cast_info ci WHERE t.id=mi.movie_id AND t.id=mc.movie_id AND t.id=ci.movie_id AND ci.role_id=2 AND mi.info_type_id=16 AND t.production_year>2000;
+Cost: 16.08
+
+Query: SELECT COUNT(*) FROM title t,cast_info ci,movie_keyword mk WHERE t.id=mk.movie_id AND t.id=ci.movie_id AND t.production_year>1950 AND t.kind_id=1;
+Cost: 12.54
+
+Query: SELECT COUNT(*) FROM title t,cast_info ci,movie_keyword mk WHERE t.id=mk.movie_id AND t.id=ci.movie_id AND t.production_year>2000 AND t.kind_id=1;
+Cost: 12.54
+
+Query: SELECT COUNT(*) FROM title t,movie_keyword mk,movie_companies mc,movie_info mi WHERE t.id=mk.movie_id AND t.id=mc.movie_id AND t.id=mi.movie_id AND mk.keyword_id=398 AND mc.company_type_id=2 AND t.production_year>1950 AND t.production_year<2000;
+Cost: 48.67
+
+Query: SELECT COUNT(*) FROM title t,movie_keyword mk,movie_companies mc,movie_info mi WHERE t.id=mk.movie_id AND t.id=mc.movie_id AND t.id=mi.movie_id AND mk.keyword_id=398 AND mc.company_type_id=2 AND t.production_year>2000 AND t.production_year<2010;
+Cost: 48.67
+
+Query: SELECT COUNT(*) FROM title t,movie_keyword mk,movie_companies mc,movie_info mi WHERE t.id=mk.movie_id AND t.id=mc.movie_id AND t.id=mi.movie_id AND mk.keyword_id=398 AND mc.company_type_id=2 AND t.production_year>1950 AND t.production_year<2010;
+Cost: 48.67
+
+Query: SELECT COUNT(*) FROM title t,movie_info mi,movie_info_idx mi_idx,movie_keyword mk,movie_companies mc WHERE t.id=mi.movie_id AND t.id=mk.movie_id AND t.id=mi_idx.movie_id AND t.id=mc.movie_id AND t.production_year>2008 AND mi.info_type_id=8 AND mi_idx.info_type_id=101;
+Cost: 20459.67
+
+Query: SELECT COUNT(*) FROM title t,movie_info mi,movie_info_idx mi_idx,movie_keyword mk,movie_companies mc WHERE t.id=mi.movie_id AND t.id=mk.movie_id AND t.id=mi_idx.movie_id AND t.id=mc.movie_id AND t.production_year>2009 AND mi.info_type_id=8 AND mi_idx.info_type_id=101;
+Cost: 20459.67
+
+Query: SELECT COUNT(*) FROM title t,movie_info mi,movie_companies mc,cast_info ci,movie_keyword mk WHERE t.id=mi.movie_id AND t.id=mc.movie_id AND t.id=ci.movie_id AND t.id=mk.movie_id AND ci.role_id=2 AND mi.info_type_id=16 AND t.production_year>2010;
+Cost: 18.01
+
+Query: SELECT COUNT(*) FROM title t,movie_info mi,movie_companies mc,cast_info ci,movie_keyword mk WHERE t.id=mi.movie_id AND t.id=mc.movie_id AND t.id=ci.movie_id AND t.id=mk.movie_id AND ci.role_id=2 AND mi.info_type_id=16 AND t.production_year>2010 AND mc.company_id=22956;
+Cost: 36.71
+
+Query: SELECT COUNT(*) FROM title t,movie_info mi,movie_companies mc,cast_info ci,movie_keyword mk WHERE t.id=mi.movie_id AND t.id=mc.movie_id AND t.id=ci.movie_id AND t.id=mk.movie_id AND ci.role_id=2 AND mi.info_type_id=16 AND t.production_year>2000;
+Cost: 18.01
+
+Query: SELECT COUNT(*) FROM title t,movie_info mi,movie_info_idx mi_idx,cast_info ci,movie_keyword mk WHERE t.id=mi.movie_id AND t.id=mi_idx.movie_id AND t.id=ci.movie_id AND t.id=mk.movie_id AND mi.info_type_id=3 AND mi_idx.info_type_id=100;
+Cost: 19086.4
+
+Query: SELECT COUNT(*) FROM title t,movie_info mi,movie_info_idx mi_idx,cast_info ci,movie_keyword mk WHERE t.id=mi.movie_id AND t.id=mi_idx.movie_id AND t.id=ci.movie_id AND t.id=mk.movie_id AND mi.info_type_id=3 AND mi_idx.info_type_id=100 AND t.production_year>2010;
+Cost: 14260.95
+
+Query: SELECT COUNT(*) FROM title t,cast_info ci,movie_keyword mk,movie_info_idx mi_idx WHERE t.id=mk.movie_id AND t.id=ci.movie_id AND t.id=mi_idx.movie_id AND t.production_year>2000 AND t.kind_id=1 AND mi_idx.info_type_id=101;
+Cost: 13.63
+
+Query: SELECT COUNT(*) FROM title t,cast_info ci,movie_keyword mk,movie_info_idx mi_idx WHERE t.id=mk.movie_id AND t.id=ci.movie_id AND t.id=mi_idx.movie_id AND t.production_year>2005 AND t.kind_id=1 AND mi_idx.info_type_id=101;
+Cost: 13.63
+
+Query: SELECT COUNT(*) FROM title t,movie_keyword mk,movie_companies mc,movie_info mi WHERE t.id=mk.movie_id AND t.id=mc.movie_id AND t.id=mi.movie_id AND mk.keyword_id=398 AND mc.company_type_id=2 AND t.production_year=1998;
+Cost: 46.55
+
+Query: SELECT COUNT(*) FROM title t,movie_info mi,movie_info_idx mi_idx,movie_keyword mk,movie_companies mc WHERE t.id=mi.movie_id AND t.id=mk.movie_id AND t.id=mi_idx.movie_id AND t.id=mc.movie_id AND t.production_year>2000 AND mi.info_type_id=8 AND mi_idx.info_type_id=101;
+Cost: 20459.67
+
+Query: SELECT COUNT(*) FROM title t,movie_info mi,movie_info_idx mi_idx,movie_keyword mk,movie_companies mc WHERE t.id=mi.movie_id AND t.id=mk.movie_id AND t.id=mi_idx.movie_id AND t.id=mc.movie_id AND t.production_year>2005 AND mi.info_type_id=8 AND mi_idx.info_type_id=101;
+Cost: 20459.67
+
+Query: SELECT COUNT(*) FROM title t,movie_info mi,movie_companies mc,cast_info ci,movie_keyword mk WHERE t.id=mi.movie_id AND t.id=mc.movie_id AND t.id=ci.movie_id AND t.id=mk.movie_id AND ci.role_id=2 AND mi.info_type_id=16 AND t.production_year>2000 AND t.production_year<2010 AND mk.keyword_id=7084;
+Cost: 17.52
+
+Query: SELECT COUNT(*) FROM title t,movie_info mi,movie_companies mc,cast_info ci,movie_keyword mk WHERE t.id=mi.movie_id AND t.id=mc.movie_id AND t.id=ci.movie_id AND t.id=mk.movie_id AND ci.role_id=2 AND mi.info_type_id=16 AND t.production_year>2000 AND t.production_year<2005 AND mk.keyword_id=7084;
+Cost: 17.52
+
+Query: SELECT COUNT(*) FROM title t,movie_info mi,movie_info_idx mi_idx,cast_info ci,movie_keyword mk WHERE t.id=mi.movie_id AND t.id=mi_idx.movie_id AND t.id=ci.movie_id AND t.id=mk.movie_id AND mi.info_type_id=3 AND mi_idx.info_type_id=100 AND t.production_year>2000;
+Cost: 14260.95
+

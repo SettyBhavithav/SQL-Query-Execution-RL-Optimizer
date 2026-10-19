@@ -1,0 +1,41 @@
+======================================================================
+REINFORCEMENT LEARNING-BASED SQL QUERY EXECUTION OPTIMIZER
+EXPERIMENTAL VERIFICATION TERMINAL OUTPUTS
+Date: 2026-10-11
+======================================================================
+
+1. OFFLINE TESTS
+Command: python -m pytest tests/test_offline.py -q
+----------------------------------------------------------------------
+............                                                             [100%]
+12 passed in 3.66s
+
+
+2. LIVE PPO EVALUATION (217 TEST QUERIES)
+Command: python -m sql_optimizer.eval_cli --algo ppo
+----------------------------------------------------------------------
+Evaluating PPO on 217 test queries...
+
+Results:
+  Queries: 217
+  Improved: 2.8% (6 queries)
+  Unchanged: 97.2% (211 queries)
+  Degraded: 0.0%
+  Mean time improvement: -0.0007
+  Report: results/ppo_eval_cli.md
+
+
+3. LIVE DQN EVALUATION (217 TEST QUERIES)
+Command: python -m sql_optimizer.eval_cli --algo dqn
+----------------------------------------------------------------------
+Evaluating DQN on 217 test queries...
+
+Results:
+  Queries: 217
+  Improved: 8.8% (19 queries)
+  Unchanged: 91.2% (198 queries)
+  Degraded: 0.0%
+  Mean time improvement: 0.0648
+  Report: results/dqn_eval_cli.md
+
+======================================================================

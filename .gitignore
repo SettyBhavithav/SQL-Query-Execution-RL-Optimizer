@@ -1,0 +1,40 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+.pytest_cache/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Large files / data / models
+/data/
+/models/
+/output/
+/logs/
+*.csv
+*.jsonl
+*.parquet
+*.h5
+*.pth
+*.pt
+*.ckpt
+*.zip
+*.tar.gz
+!results/*.zip
+
+# OS / editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Keep only the important PNG graphs (comment out if you want to ignore all images)
+/ppo_graph.png
+/sac_graph.png
+/ddpg_graph.png
